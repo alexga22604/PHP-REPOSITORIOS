@@ -7,8 +7,15 @@
 </head>
 <body>
 <?php 
-random_int(1,10)
+$numero1 = random_int(1,10);
+$numero2 = random_int(1,10);
 
+echo $numero1. " + " . $numero2. "=" . ($numero1 + $numero2). "<br>";
+echo $numero1. " - " . $numero2. "=" . ($numero1 - $numero2). "<br>";
+echo $numero1. " * " . $numero2. "=" . ($numero1 * $numero2). "<br>";
+echo $numero1. " / " . $numero2. "=" . ($numero1 / $numero2). "<br>";
+echo $numero1. " % " . $numero2. "=" . ($numero1 % $numero2). "<br>";
+echo $numero1. " ** " . $numero2. "=" . ($numero1 ** $numero2). "<br>";
 
 ?>
     
