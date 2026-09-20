@@ -16,7 +16,7 @@
                 
                 echo '<span style="color:red">' . $i . '</span>';
             } else {
-                echo '<span style="color:blue">' . $i . '</span>';
+             echo '<span style="color:blue">' . $i . '</span>';
             }
         }
         echo "<br>";
