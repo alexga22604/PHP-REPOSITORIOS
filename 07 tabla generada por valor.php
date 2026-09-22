@@ -7,7 +7,7 @@
     $numero2 = random_int(100, 500);
     $numero3 = random_int(100, 500);
     ?>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" http http-equiv="refresh" content="2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
