@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--2.- Crear un array que almacene 5 cadenas con 
+    <!--2.- Crear un array que almacene 5 cadenas con 
     el nombre de periódicos y sus enlaces para acceder.
      El array será asociativo con el nombre del 
      periódico como clave y su URL como valor. 
@@ -11,24 +11,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJ3_02</title>
 
-    <?php
+<?php
 
-    $medios = [
-        "El Pais" => "https://www.elpais.com",
-        "El Mundo" => "https://www.elmundo.es",
-        "ABC" => "https://www.abc.es",
-        "La Vanguardia" => "https://www.lavanguardia.com",
-        "El Confidencial" => "https://www.elconfidencial.com"
-    ];
+$medios = [ "El Pais" => "https://www.elpais.com", "El Mundo" => "https://www.elmundo.es", "ABC" => "https://www.abc.es", "La Vanguardia" => "https://www.lavanguardia.com",
+ "El Confidencial" => "https://www.elconfidencial.com"];
 
 
-    function mostrarMedios($array_medios)
-    {
-        foreach ($array_medios as $nombre => $url) {
-            echo "<li><a href='$url'>$nombre</a></li>";
-        }
+ function mostrarMedios($array_medios) {
+    foreach ($array_medios as $nombre => $url) {
+        echo "<li><a href='$url'>$nombre</a></li>";
     }
-    ?>
+}
+?>
 
 
 </head>
@@ -40,5 +34,4 @@
         ?>
     </ul>
 </body>
-
 </html>
