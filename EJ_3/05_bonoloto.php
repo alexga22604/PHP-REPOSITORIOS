@@ -24,8 +24,7 @@ $complementario = $bonoloto[5];
 $array_sin_complementario = array_slice($bonoloto, 0, 5);
 sort($array_sin_complementario);                     
 ?>
-<!DOCTYPE html>
-<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
