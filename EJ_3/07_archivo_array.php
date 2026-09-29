@@ -24,8 +24,8 @@ $pais_random = array_rand($paises, 2);
 <body>
     <?php foreach ($pais_random as $pais): ?>
         <h2><?= $pais ?></h2>
-        <p>Capital: <?= $paises[$pais]['Capital'] ?></p>
-        <p>Población: <?= $paises[$pais]['Poblacion'] ?></p>
+        <p>Capital: <?= $paises[$pais]["Capital"] ?></p>
+        <p>Población: <?= $paises[$pais]["Poblacion"] ?></p>
 
         <p>Ciudades:</p>
         <ul>
