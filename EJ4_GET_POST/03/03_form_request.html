@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJ4 - Form Request</title>
+    <style>
+      h1 {
+        margin: 0;
+        width: 400px;
+        padding: 22px 10px;
+        background: #0000ff;
+        color: #fff;
+        font-size: 28px;
+        text-align: center;
+        text-shadow: 2px 2px 3px #000;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="03_form_request.php">
+      <div class="caja">
+        <h1>FORMULARIOS CON CONTROLES HTML5</h1>
+        <br />
+        NUMERO 1 (number)
+        <input type="number" name="n1" id="n1" required /> <br />
+        NUMERO 2 (range 10-100)
+        <input type="range" name="n2" id="n2" min="10" max="100" required />
+        <br />
+        Estaciones (list)
+
+        <select name="estaciones" id="estaciones" required>
+            <option value="Primavera">Primavera</option>
+            <option value="Verano">Verano</option>
+            <option value="Otoño">Otoño</option>
+            <option value="Invierno">Invierno</option>
+        </select>
+        <br />
+        Color favorito (color)
+        <input type="color" name="color" id="color" required /> <br /> 
+        Buscar (search) <input type="search" name="buscar" id="buscar" required /> <br />
+        Nombre (text) <input type="text" name="nombre" id="nombre" required /> <br />
+        Apellido (text) <input type="text" name="apellido" id="apellido" required />  <br />
+        Email (email) <input type="email" name="email" id="email" required /> <br />
+        Fecha de nacimiento <input type="date" name="fecha" id="fecha" required /> <br />
+        Edad (number) (de 0 a 150) <input type="number" name="edad" id="edad" min="0" max="150" required />  <br />
+        Página personal (url) <input type="url" name="url" id="url" required /><br />
+         Horario De <input type="time" name="horario" id="horario" required /> a
+        <input type="time" name="horario2" id="horario2" required /> <br />
+        <button type="submit" name="enviar" value="enviar">Enviar</button>
+      </div>
+    </form>
+  </body>
+</html>
