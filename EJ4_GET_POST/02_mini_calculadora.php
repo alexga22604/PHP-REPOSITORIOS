@@ -112,7 +112,7 @@ if (isset($_POST['operacion'])) {
 <body>
     <h1>Mini Calculadora</h1>
 
-    <form method="POST" action="02.php">
+    <form method="post" action="02.php">
         N1: <input type="number" name="N1" required><br>
         N2: <input type="number" name="N2" required><br>
         <div class="caja">
