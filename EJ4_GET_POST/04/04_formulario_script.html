@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <!-- 
+4. Elaborar el  formulario siguiente (04. html) y 
+procesar los datos enviados que un script php
+ (04.php) que muestres los valores recibidos 
+ según el siguiente formato:
+-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ej4 - Form script</title>
+
+    <style>
+      h1 {
+        margin: 0;
+        width: 400px;
+        padding: 22px 10px;
+        background: #0000ff;
+        color: #fff;
+        font-size: 28px;
+        text-align: center;
+        text-shadow: 2px 2px 3px #000;
+      }
+      h2 {
+        margin: 0;
+        color: #626262;
+        font-size: 20px;
+        text-align: left;
+      }
+
+      form {
+        padding: 20px;
+        border-bottom: 1px solid #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formilario con múltiples campos</h1>
+    <form method="post" action="04_formulario_script.php">
+      <hr>
+          <h2>CAMPOS DE TEXTO:</h2>
+          <br />
+          Nombre: <input type="text" name="nombre" id="nombre" required /> <br />
+          Contraseña:
+          <input type="password" name="contrasena" id="contrasena" required />
+          <br />
+      </hr>
+      <hr />
+      <h2>RADIO:</h2>
+      <br />
+      Rojo: <input type="radio" name="color" id="rojo" value="Rojo" required />
+      <br />
+      Naranja:
+      <input type="radio" name="color" id="mujer" value="Naranja" /> 
+      <br />
+      Verde: <input type="radio" name="color" id="verde" value="Verde" />
+      <br />
+      <hr />
+      <h2>CHECKBOX:</h2>
+      <br />
+      Quiero recibir publicidad
+      <input type="checkbox" name="publicidad" id="publicidad" value="Si" />
+      <br />
+      <hr />
+          <h2>MULTI CHECKBOX:</h2>
+          <br />
+          Ingles:
+          <input type="checkbox" name="idiomas[]" id="Ingles" value="Ingles" />
+          Frances:
+          <input type="checkbox" name="idiomas[]" id="Frances" value="Frances" />
+          Aleman:
+          <input type="checkbox" name="idiomas[]" id="Aleman" value="Aleman" />
+          <br />
+        <hr>
+          <h2>SELECT:</h2>
+          <h2>Simple:</h2>
+          <br />
+          Año de finalización de estudios:<select name="estudios" id="año" required>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+          </select>
+          <br />
+          <h2>Múltiple:</h2>
+          <br />
+          Idiomas que hablas:
+          <select name="ciudades[]" id="ciudades" multiple required>
+            <option value="Asturias">Asturias</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Sevilla">Sevilla</option>
+          </select>
+          <br />
+      </hr>
+      <hr />
+      <h2>TEXTAREA:</h2>
+      <br />
+      Escriba sus comentarios:
+      <textarea
+        name="comentarios"
+        id="comentarios"
+        cols="30"
+        rows="10"
+        required
+      ></textarea>
+      <br />
+      <hr />
+      <h2>BOTONES:</h2>
+      <br />
+      <button type="reset" name="resetear" value="resetear">
+        Resetear el formulario
+      </button>
+      <button type="submit" name="enviar" value="enviar">
+        Enviar el formulario al servidor
+      </button>
+    </form>
+  </body>
+</html>
