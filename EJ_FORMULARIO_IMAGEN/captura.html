@@ -136,7 +136,7 @@
 
       <div class="campo">
         <label for="imagen">Subir imagen:</label>
-        <input type="hidden" name="MAX_FILE_SIZE" value="10240" />
+        <input type="hidden" name="MAX_FILE_SIZE" value="30720" />
         <input type="file" id="imagen" name="imagen" accept="image/png" />
         <span id="errorImagen" class="error"></span>
       </div>
@@ -148,7 +148,7 @@
     </form>
 
     <script>
-      const MAX_BYTES = 10 * 1024;
+      const MAX_BYTES = 30 * 1024;
 
       const form = document.getElementById("formJugador");
       const inputImagen = document.getElementById("imagen");
@@ -163,7 +163,7 @@
             mensaje = "Solo se permiten archivos PNG.";
           } else if (archivo.size > MAX_BYTES) {
             mensaje =
-              "La imagen no puede superar los 10 KB (la tuya pesa " +
+              "La imagen no puede superar los 30 KB (la tuya pesa " +
               (archivo.size / 1024).toFixed(1) +
               " KB).";
           }

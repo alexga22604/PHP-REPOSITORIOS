@@ -1,7 +1,7 @@
 <?php
 
 // ---------- Configuración ----------
-const MAX_BYTES     = 10 * 1024;              // 10 KB
+const MAX_BYTES     = 30 * 1024;              // 30 KB
 const DIR_UPLOADS   = __DIR__ . '/uploads/';  // directorio en disco (debe existir y ser escribible)
 const URL_UPLOADS   = 'uploads/';             // ruta que se usa en el <img>
 const IMG_CALAVERA  = 'uploads/calavera.png'; // imagen por defecto (ya existe en uploads)
