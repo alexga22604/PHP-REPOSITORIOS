@@ -40,9 +40,9 @@ if (isset($_POST["accion"])) {
             }
             break;
         case " Anular ":
-            $fruta = $_POST['fruta'];
             // Vacío la tabla de pedidos en la sesión
-            unset($_SESSION['pedidos'] [$fruta]);
+            unset($_SESSION['pedidos']);
+            $_SESSION['pedidos'] = [];
             break;
         case " Terminar ":
             // Destruyo la sesión y vuelvo a la página de bienvenida

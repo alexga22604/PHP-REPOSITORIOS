@@ -14,11 +14,12 @@
     
     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
         <label for="fruta">Selecciona la fruta:</label>
+        <?php $fruta_marcada = $_POST['fruta'] ?? '';  ?>
         <select name="fruta" id="fruta">
-			<option value="Platanos">Plátanos 🍌</option>
-			<option value="Naranjas">Naranjas 🍊</option>
-			<option value="Limones">Limones 🍋</option>
-			<option value="Manzanas">Manzanas 🍎</option>
+			<option value="Platanos" <?= $fruta_marcada == 'Platanos' ? '' : '' ?>>Plátanos 🍌</option>
+			<option value="Naranjas" <?= $fruta_marcada == 'Naranjas' ? 'selected' : '' ?>>Naranjas 🍊</option>
+			<option value="Limones" <?= $fruta_marcada == 'Limones' ? 'selected' : '' ?>>Limones 🍋</option>
+			<option value="Manzanas" <?= $fruta_marcada == 'Manzanas' ? 'selected' : '' ?>>Manzanas 🍎</option>
         </select>
         
         <label for="cantidad">Cantidad (unidades/kg):</label>
