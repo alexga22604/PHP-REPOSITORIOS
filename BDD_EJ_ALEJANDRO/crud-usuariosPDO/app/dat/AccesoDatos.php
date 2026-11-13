@@ -89,11 +89,12 @@ class AccesoDatos {
     // UPDATE
     public function modProducto($producto):bool{
       
-        $stmt_modproducto   = $this->dbh->prepare("update Productos set nombre=:nombre, precio=:precio, stock=:stock where codigo=:codigo");
+        $stmt_modproducto   = $this->dbh->prepare("update Productos set nombre=:nombre, codigo=:codigo, precio=:precio, stock=:stock, stock_min=:stock_min where codigo=:codigo");
         $stmt_modproducto->bindValue(':codigo',$producto->codigo);
         $stmt_modproducto->bindValue(':nombre',$producto->nombre);
         $stmt_modproducto->bindValue(':precio',$producto->precio);
         $stmt_modproducto->bindValue(':stock',$producto->stock);
+        $stmt_modproducto->bindValue(':stock_min',$producto->stock_min);
         $stmt_modproducto->execute();
         // El número de filas modificadas debe ser 1
         $resu = ($stmt_modproducto->rowCount () == 1);
@@ -102,9 +103,9 @@ class AccesoDatos {
 
     //INSERT
     public function addProducto($producto):bool{
-        $stmt_creauser  = $this->dbh->prepare("insert into Productos (codigo,nombre,precio,stock) Values(?,?,?,?)");
+        $stmt_creauser  = $this->dbh->prepare("insert into Productos (codigo,nombre,precio,stock,stock_min) Values(?,?,?,?,?)");
         //$stmt_creauser->bindValue(1,$user->login);
-        $stmt_creauser->execute( [$producto->codigo, $producto->nombre, $producto->precio, $producto->stock]);
+        $stmt_creauser->execute( [$producto->codigo, $producto->nombre, $producto->precio, $producto->stock, $producto->stock_min] );
         $resu = ($stmt_creauser->rowCount () == 1);
         return $resu;
     }

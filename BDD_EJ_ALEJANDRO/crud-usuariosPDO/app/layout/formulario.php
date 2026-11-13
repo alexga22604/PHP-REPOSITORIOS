@@ -49,6 +49,14 @@
                                <?= ($orden == "Detalles") ? "readonly" : "" ?>>
                     </td>
                 </tr>
+                <tr>
+                    <td><label for="stock_min">Stock Mínimo</label></td>
+                    <td>
+                        <input type="number" id="stock_min" name="stock_min" 
+                               value="<?= $producto->stock_min ?>" 
+                               <?= ($orden == "Detalles") ? "readonly" : "" ?>>
+                    </td>
+                </tr>
             </table>
 
             <div style="margin-top: 20px;">

@@ -19,6 +19,7 @@ function accionAlta(){
     $producto->codigo   = "";
     $producto->precio   = "";
     $producto->stock = "";
+    $producto->stock_min = "";
     $orden= "Nuevo";
     include_once "layout/formulario.php";
 }
@@ -44,6 +45,7 @@ function accionPostAlta(){
     $producto->codigo   = $_POST['codigo'];
     $producto->precio   = $_POST['precio'];
     $producto->stock = $_POST['stock'];
+    $producto->stock_min = $_POST['stock_min'];
     $db = AccesoDatos::getModelo();
     $db->addProducto($producto);
     
@@ -56,6 +58,7 @@ function accionPostModificar(){
     $producto->codigo   = $_POST['codigo'];
     $producto->precio   = $_POST['precio'];
     $producto->stock = $_POST['stock'];
+    $producto->stock_min = $_POST['stock_min'];
     $db = AccesoDatos::getModelo();
     $db->modProducto($producto);
     

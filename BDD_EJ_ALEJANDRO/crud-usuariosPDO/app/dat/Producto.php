@@ -7,6 +7,7 @@ class Producto
     private $nombre;
     private $precio;
     private $stock;
+    private $stock_min;
     
     // Getter con método mágico
     public function __get($atributo){

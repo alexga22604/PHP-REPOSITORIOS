@@ -36,7 +36,6 @@ else {
 
 $contenido .= mostrarDatos();
 // Muestro la página principal
-//COMPLETAR
 
 include_once "app/layout/principal.php";
 
